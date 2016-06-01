@@ -1,0 +1,272 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[$fontsize$, letterpaper]{article}
+\usepackage{setspace}
+%%%------------------------------------------------------------------------
+%%% Metadata
+%%%------------------------------------------------------------------------
+
+%% Change as needed. Or just add me as a coauthor. Only some of these are
+%% used below in the hyperref declaration and address banner section.
+\def\myauthor{$instructor$}
+\def\mytitle{Syllabus}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{}
+\def\myaddress{$office$}
+\def\myemail{$email$}
+\def\myweb{$urls$}
+\def\myphone{$phone$}
+\def\myfax{$fax$}
+
+% LAYOUT
+%--------------------------------
+% Margins
+\usepackage{geometry} 
+\geometry{$geometry$}
+\usepackage{mdwlist}
+
+% Do not indent paragraphs
+\setlength\parindent{0in}
+
+% Enable multicolumns
+\usepackage{multicol}
+\setlength{\columnsep}{-3.5cm}
+
+% LANGUAGE
+%--------------------------------
+% Set the main language
+$if(lang)$
+\usepackage{polyglossia}
+\setmainlanguage{$lang$}
+$else$
+\usepackage{polyglossia}
+\setmainlanguage{english}
+$endif$
+
+% TYPOGRAPHY
+%--------------------------------
+\usepackage{fontspec} 
+\usepackage{xunicode}
+\usepackage{xltxtra}
+% converts LaTeX specials (quotes, dashes etc.) to Unicode
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{$mainfont$}
+\setsansfont[Mapping=tex-text]{$sansfont$}
+\setmonofont[Mapping=tex-text,Scale=0.9]{Consolas}
+% Cool ampersand
+\newcommand{\amper}{{\fontspec[Scale=.95]{$mainfont$}\selectfont\itshape\&}}
+% icons
+\defaultfontfeatures{
+    Path = /usr/local/texlive/2015/texmf-dist/fonts/opentype/public/fontawesome/ }
+\usepackage{fontawesome}
+\usepackage{marvosym}
+\usepackage[autostyle=try]{csquotes}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
+
+% HEADINGS
+%--------------------------------
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\rmfamily\mdseries} 
+\subsectionfont{\rmfamily\mdseries\scshape\normalsize} 
+\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize} 
+
+% PDF SETUP
+%--------------------------------
+\usepackage[xetex, bookmarks, colorlinks, breaklinks, pdftitle={$name$'s Vita},pdfauthor={$name$}]{hyperref}
+\hypersetup{linkcolor=darkblue,citecolor=darjblue,filecolor=black,urlcolor=darkblue}
+
+% OTHER
+%-------------------------------
+\usepackage{lastpage}
+\usepackage{epigraph}
+
+%%%------------------------------------------------------------------------
+%%% Page layout
+%%%------------------------------------------------------------------------
+
+% Avoid widows and orphans
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
+
+% Fancy header/footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+\rfoot{\footnotesize \thepage\ | \pageref{LastPage}}
+\lfoot{\footnotesize \myauthor}
+
+\fancypagestyle{firststyle}
+{
+  \fancyhf{}
+  % $if(cfoot)$\cfoot{$cfoot$}$else$\cfoot{\footnotesize \thepage\ | \pageref{LastPage}}$endif$
+  \rfoot{\footnotesize \thepage\ | \pageref{LastPage}}
+  \renewcommand{\headrulewidth}{0pt}
+}
+\thispagestyle{firststyle}
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+%% Marginal header
+%% Note: as the document goes on you may need to introduce a (gradually increasing)
+%% \vspace element to keep the marginal header pleasingly aligned with the first
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or
+%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
+
+
+%% custom ampersand (font consistent with the one chosen above)
+% \newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
+%% No bullets on labels
+% \renewcommand{\labelitemi}{~}
+
+%% Custom hanging indent for items
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+%-------------------------------------
+%-------------------------------------
+% DOCUMENT
+%-------------------------------------
+%-------------------------------------
+\begin{document}
+\setstretch{.97}
+
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+\begin{minipage}[t]{2.95in}
+ \flushleft \footnotesize \textsc{Instructor:} $instructor$\\ \textsc{Course:}
+ $course$\\ \textsc{Time:} $time$\\ \textsc{Location:} $location$\\
+ \textsc{Office:} $office$\\ \textsc{Office Hours:} $hours$
+\end{minipage}
+\hfill
+\hfill
+\begin{minipage}[t]{1.7in}
+  \flushright \footnotesize \faicon{phone} ~$phone$\\ \Faxmachine ~$fax$\\ \faicon{envelope} ~$email$\\ $for(urls)$ \faicon{globe} ~$urls$\\ $endfor$
+  Updated: \today
+\end{minipage}
+
+\bigskip
+%-------------------------------------
+% Frontmatter
+%-------------------------------------
+
+%% Course title
+\noindent{\huge {\textsc{$title$}}}\\
+
+%% Catchy quote
+$if(quote)$
+\bigskip
+\epigraph{$quote.content$}{\textit{$quote.title$}\\\textsc{$quote.author$}}
+\smallskip
+$endif$
+
+%-------------------------------------
+% Main
+%-------------------------------------
+\section*{Course Overview}
+
+$overview$
+
+\section*{Course Objectives}
+
+$objectives$
+
+\section*{Course Materials}
+
+$materials$
+
+\section*{Course Requirements}
+$for(requirements)$
+\begin{itemize*}
+\item \textbf{Preparation}: $requirements.preparation$
+\item \textbf{Attendance}: $requirements.attendance$
+\item \textbf{Website}: $requirements.website$
+\item \textbf{Format for Papers}: $requirements.papers$
+\item \textbf{Late Work}: $requirements.late-work$
+\end{itemize*}
+$endfor$
+
+\section*{Evaluation}
+
+$for(evaluation)$
+$if(exam)$
+\textbf{Exams}: 45\%
+\begin{itemize*}
+\item The exams will involve a combination of short answer and short essay questions.
+\begin{itemize*}
+\item Mid-Term: 20\%
+\item Final: 25\%
+\end{itemize*}
+\end{itemize*}
+$endif$
+
+$if(quiz)$
+\textbf{Quizzes}: 20\%
+\begin{itemize*}
+\item Brief review quizzes held during section. They will not be announced ahead of time. Your two lowest grades will be dropped and your highest counted twice. 
+\end{itemize*}
+$endif$
+
+$if(responses)$
+\textbf{Five Reading Responses}: 20\%
+\begin{itemize*}
+\item Explain and discuss issues raised by the reading. This includes, but is
+  not limited to, (i) giving a brief and concise summary of the main points of
+  the reading and (ii) raising questions concerning the argument or position
+  articulated. Reading responses should be a minimum of 200 words and maximum of
+  600 words in length and are due at least 24 hours before your scheduled
+  section (exact deadline will be set by your section leader). You may choose
+  which assignments you wish to respond to. \textbf{However, at least two
+    responses must be submitted by the time of the mid-term exam.} All responses
+  should be emailed to your section leader. The subject line must read: "Intro
+  Philosophy Reading Response" along with the date.
+
+\end{itemize*}
+$endif$
+
+\textbf{Participation Grade}: 10\%
+\begin{itemize*}
+\item The participation grade takes into account your attendance in lecture and section as well as the quantity and quality of your participation.
+\end{itemize*}
+$endfor$
+
+$for(policies)$
+
+\section*{Policies}
+\begin{itemize*}
+\item \textbf{Academic Integrity}: $policies.integrity$
+\item \textbf{University Policies}: $policies.university$
+\item \textbf{ADA}: $policies.ada$
+\item \textbf{Misc.}: $policies.misc$
+\end{itemize*}
+
+$endfor$
+
+$for(resources)$
+
+\section*{Further Resources}
+\begin{itemize*}
+\item \textbf{Jargon}: $resources.jargon$
+\item \textbf{Help with writing}: $resources.help$
+\item \textbf{Reference}: $resources.reference$
+\end{itemize*}
+
+$endfor$
+
+
+\end{document}

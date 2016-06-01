@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"$if(lang)$ lang="$lang$" xml:lang="$lang$"$endif$>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic&subset=latin,greek' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="date" content="$date-meta$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+  <style type="text/css">code{white-space: pre;}</style>
+$if(quotes)$
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+$endif$
+$if(highlighting-css)$
+  <style type="text/css">
+$highlighting-css$
+  </style>
+$endif$
+$for(css)$
+  <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
+$endfor$
+$if(math)$
+  $math$
+$endif$
+$for(header-includes)$
+  $header-includes$
+$endfor$
+</head>
+<body>
+$for(include-before)$
+$include-before$
+$endfor$
+    <!-- $if(title)$ -->
+    <!-- <div id="$idprefix$header"> -->
+    <!-- <h1 class="title">$title$</h1> -->
+    <!-- $if(subtitle)$ -->
+    <!-- <h1 class="subtitle">$subtitle$</h1> -->
+    <!-- $endif$ -->
+    <!-- $for(instructor)$ -->
+    <!-- <h2 class="author">$author$</h2> -->
+    <!-- $endfor$ -->
+    <!-- $if(date)$ -->
+    <!-- <h3 class="date">$date$</h3> -->
+    <!-- $endif$ -->
+    <!-- </div> -->
+    <!-- $endif$ -->
+    <!-- $if(toc)$ -->
+    <!-- <div id="$idprefix$TOC"> -->
+    <!-- $toc$ -->
+    <!-- </div> -->
+    <!-- $endif$ -->
+
+<!--Address & Contact Info -->
+<div id="info" style="line-height: 1.2em">
+  <div id="left">
+    <span style="font-variant: small-caps;">Instructor:</span> $instructor$</br>
+    <span style="font-variant: small-caps;">Course:</span> $course$</br>
+    <span style="font-variant: small-caps;">Time:</span> $time$</br>
+    <span style="font-variant: small-caps;">Location:</span> $location$</br>
+    <span style="font-variant: small-caps;">Office:</span> $office$</br>
+    <span style="font-variant: small-caps;">Office Hours:</span> $hours$</br>
+</div>
+
+<div id="right" style="line-height: 1.2em;">
+  $for(phone)$
+  <i class="fa fa-phone"></i> $phone$</br>
+$endfor$
+$for(fax)$
+<i class="fa fa-fax"></i> $fax$</br>
+$endfor$
+$for(email)$
+<i class="fa fa-envelope-o"></i> $email$</br>
+  $endfor$
+  $for(urls)$
+  <i class="fa fa-globe"></i> $urls$</br>
+  $endfor$
+</div>
+</div>
+
+<!-- Front Matter -->
+
+<h1>$title$</h1>
+<!-- </br> -->
+
+<!-- Overview -->
+<h2>Course Overview</h2>
+<p>$overview$</p>
+
+<!-- Course Objectives -->
+<h2>Course Objectives</h2>
+<p>$objectives$</p>
+
+<!-- Course Materials -->
+<h2>Course Materials</h2>
+<p>$materials$</p>
+
+<!-- Requirements -->
+<h2>Course Requirements</h2>
+
+    <h3>Preparation</h3>
+    <p>$requirements.preparation$</p>
+
+    <!-- Attendance -->
+    <h3>Attendance</h3>
+    <p>$requirements.attendance$</p>
+
+    <!-- Website -->
+    <h3>Website</h3>
+    <p>$requirements.website$</p>
+
+    <!-- Format for Papers -->
+    <h3>Format for Papers</h3>
+    <p>$requirements.papers$</p>
+
+    <!-- Late Work -->
+    <h3>Late Work</h3>
+    <p>$requirements.late-work$</p>
+
+<!-- Evaluation -->
+<h2>Evaluation</h2>
+
+    <!-- Exam -->
+    <h3>Exams</h3>
+    <p>$evaluation.exam$</p>
+
+    <!-- Essays -->
+    <h3>Essays</h3>
+    <p>$evaluation.essay$</p>
+
+    <!-- Quizzes -->
+    <h3>Quizzes</h3>
+    <p>$evaluation.quiz$</p>
+
+    <!-- Responses -->
+    <h3>Reading Responses</h3>
+    <p>$evaluation.responses$</p>
+
+    <!-- Participation -->
+    <h3>Participation</h3>
+    <p>$evaluation.participation$</p>
+
+<!-- Policies -->
+<h2>Policies </h2>
+
+    <!-- Academic Integrity -->
+    <h3>Academic Integrity</h3>
+    <p>$policies.integrity$</p>
+
+    <!-- University Policies -->
+    <h3>University Policies</h3>
+    <p>$policies.university$</p>
+
+    <!-- ADA -->
+    <h3>ADA</h3>
+    <p>$policies.ada$</p>
+
+    <!-- Miscellaneous -->
+    <h3>Miscellaneous</h3>
+    <p>$policies.misc$</p>
+
+<!-- Resources -->
+<h2>Resources</h2>
+
+    <!-- Jargon -->
+    <h3>Jargon</h3>
+    <p>$resources.jargon$</p>
+
+    <!-- Help -->
+    <h3>Help with Writing</h3>
+    <p>$resources.help$</p>
+
+    <!-- Reference -->
+    <h3>Reference</h3>
+    <p>$resources.reference$</p>
+
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
+</body>
+</html>

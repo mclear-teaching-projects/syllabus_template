@@ -1,0 +1,66 @@
+---
+# Instructor details
+instructor: 
+course: 
+time: 
+location: 
+office: 
+hours: 
+phone: 
+fax: 
+email: 
+# Insert URLs without http://
+urls:
+
+# Front matter
+title: 
+
+quote: 
+- content: 
+  title: 
+  author:
+
+# Sections
+overview:
+objectives:
+materials:
+requirements:
+- preparation:
+  attendance:
+  website:
+  papers:
+  late-work:
+evaluation:
+- exam:
+    - title: 
+      description: 
+  essay:
+    - title: 
+      description: 
+  quiz:
+    - title: 
+      description: 
+  responses:
+    - title:
+      description:
+  participation:
+    - title: 
+      description: 
+policies:
+- integrity:
+  university:
+  ada:
+  misc:
+resources:
+- jargon:
+  help:
+  reference:
+  
+# Settings
+mainfont: Minion Pro
+sansfont: Optima
+fontsize: 11pt
+lang: English
+geometry: letterpaper, textwidth=6in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in
+
+---
