@@ -45,10 +45,10 @@ PANDOC_PDF_OPTIONS=--template=template.tex --latex-engine=xelatex
 	$(PANDOC) $(PANDOC_OPTIONS) $(PANDOC_PDF_OPTIONS) -o syllabus.pdf $<
 
 # %.tex : %.yml
-# 	$(PANDOC) $(PANDOC_OPTIONS) $(PANDOC_PDF_OPTIONS) -o McLearCV.tex $<
+# 	$(PANDOC) $(PANDOC_OPTIONS) $(PANDOC_PDF_OPTIONS) -o $<
 
 # %.docx : %.md
-# 	$(PANDOC) $(PANDOC_OPTIONS) $(PANDOC_DOCX_OPTIONS) -o McLearCV.docx $<
+# 	$(PANDOC) $(PANDOC_OPTIONS) $(PANDOC_DOCX_OPTIONS) -o $<
 
 # %.rtf : %.md
 # 	$(PANDOC) $(PANDOC_OPTIONS) $(PANDOC_RTF_OPTIONS) -o $@ $<
@@ -70,4 +70,4 @@ clean:
 	- $(RM) $(EXPORTED_DOCS)
 
 move:
-	- mv McLearCV* /Users/Roambot/Dropbox/Personal/bin/pelican-web/content/extra/
+	- mv syllabus* # move to desired place
