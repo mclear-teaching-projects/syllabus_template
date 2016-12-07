@@ -62,7 +62,7 @@ $endif$
 \newcommand{\amper}{{\fontspec[Scale=.95]{$mainfont$}\selectfont\itshape\&}}
 % icons
 \defaultfontfeatures{
-    Path = /usr/local/texlive/2015/texmf-dist/fonts/opentype/public/fontawesome/ }
+    Path = /usr/local/texlive/2016/texmf-dist/fonts/opentype/public/fontawesome/ }
 \usepackage{fontawesome}
 \usepackage{marvosym}
 \usepackage[autostyle=try]{csquotes}
@@ -84,8 +84,10 @@ $endif$
 
 % OTHER
 %-------------------------------
+\usepackage{enumitem}
 \usepackage{lastpage}
 \usepackage{epigraph}
+\setlength{\epigraphwidth}{.525\textwidth}
 
 %%%------------------------------------------------------------------------
 %%% Page layout
@@ -95,6 +97,10 @@ $endif$
 \clubpenalty = 10000
 \widowpenalty = 10000
 \displaywidowpenalty = 10000
+
+% list display
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 % Fancy header/footer
 \usepackage{fancyhdr}
@@ -132,10 +138,10 @@ $endif$
 % \renewcommand{\labelitemi}{~}
 
 %% Custom hanging indent for items
-\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+% \def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
 %\def\ind{\hangindent=18pt\hangafter=1 \noindent}
-\def\labelitemi{~}
-\renewcommand{\labelitemii}{~}
+% \def\labelitemi{~}
+% \renewcommand{\labelitemii}{~}
 
 %-------------------------------------
 %-------------------------------------
@@ -166,14 +172,16 @@ $endif$
 %-------------------------------------
 
 %% Course title
-\noindent{\huge {\textsc{$title$}}}\\
+\noindent{\huge {\textsc{$title$}}}
 
 %% Catchy quote
+$for(quote)$
 $if(quote)$
 \bigskip
-\epigraph{$quote.content$}{\textit{$quote.title$}\\\textsc{$quote.author$}}
+\epigraph{$quote.content$}{$quote.title$\\\textsc{$quote.author$}}
 \smallskip
 $endif$
+$endfor$
 
 %-------------------------------------
 % Main
@@ -192,79 +200,86 @@ $materials$
 
 \section*{Course Requirements}
 $for(requirements)$
-\begin{itemize*}
+\begin{itemize}[leftmargin=*]
 \item \textbf{Preparation}: $requirements.preparation$
 \item \textbf{Attendance}: $requirements.attendance$
 \item \textbf{Website}: $requirements.website$
 \item \textbf{Format for Papers}: $requirements.papers$
 \item \textbf{Late Work}: $requirements.late-work$
-\end{itemize*}
+\end{itemize}
 $endfor$
 
 \section*{Evaluation}
 
 $for(evaluation)$
-$if(exam)$
-\textbf{Exams}: 45\%
-\begin{itemize*}
-\item The exams will involve a combination of short answer and short essay questions.
-\begin{itemize*}
-\item Mid-Term: 20\%
-\item Final: 25\%
-\end{itemize*}
-\end{itemize*}
+
+$if(evaluation.exam)$
+  $for(evaluation.exam)$ 
+    \textbf{$evaluation.exam.title$}
+    \begin{itemize}[leftmargin=*]
+    \item $evaluation.exam.description$ 
+    \end{itemize}
+  $endfor$
 $endif$
 
-$if(quiz)$
-\textbf{Quizzes}: 20\%
-\begin{itemize*}
-\item Brief review quizzes held during section. They will not be announced ahead of time. Your two lowest grades will be dropped and your highest counted twice. 
-\end{itemize*}
+$if(evaluation.essay)$
+  $for(evaluation.essay)$ 
+    \textbf{$evaluation.essay.title$}
+    \begin{itemize}[leftmargin=*]
+    \item $evaluation.essay.description$ 
+    \end{itemize}
+  $endfor$
 $endif$
 
-$if(responses)$
-\textbf{Five Reading Responses}: 20\%
-\begin{itemize*}
-\item Explain and discuss issues raised by the reading. This includes, but is
-  not limited to, (i) giving a brief and concise summary of the main points of
-  the reading and (ii) raising questions concerning the argument or position
-  articulated. Reading responses should be a minimum of 200 words and maximum of
-  600 words in length and are due at least 24 hours before your scheduled
-  section (exact deadline will be set by your section leader). You may choose
-  which assignments you wish to respond to. \textbf{However, at least two
-    responses must be submitted by the time of the mid-term exam.} All responses
-  should be emailed to your section leader. The subject line must read: "Intro
-  Philosophy Reading Response" along with the date.
-
-\end{itemize*}
+$if(evaluation.quiz)$
+  $for(evaluation.quiz)$ 
+    \textbf{$evaluation.quiz.title$}
+    \begin{itemize}[leftmargin=*]
+    \item $evaluation.quiz.description$ 
+    \end{itemize}
+  $endfor$
 $endif$
 
-\textbf{Participation Grade}: 10\%
-\begin{itemize*}
-\item The participation grade takes into account your attendance in lecture and section as well as the quantity and quality of your participation.
-\end{itemize*}
+$if(evaluation.responses)$
+  $for(evaluation.responses)$ 
+    \textbf{$evaluation.responses.title$}
+    \begin{itemize}[leftmargin=*]
+    \item $evaluation.responses.description$ 
+    \end{itemize}
+  $endfor$
+$endif$
+
+$if(evaluation.participation)$
+  $for(evaluation.participation)$ 
+    \textbf{$evaluation.participation.title$}
+    \begin{itemize}[leftmargin=*]
+    \item $evaluation.participation.description$ 
+    \end{itemize}
+  $endfor$
+$endif$
+
 $endfor$
 
 $for(policies)$
 
 \section*{Policies}
-\begin{itemize*}
+\begin{itemize}[leftmargin=*]
 \item \textbf{Academic Integrity}: $policies.integrity$
 \item \textbf{University Policies}: $policies.university$
 \item \textbf{ADA}: $policies.ada$
-\item \textbf{Misc.}: $policies.misc$
-\end{itemize*}
+\item \textbf{Miscellaneous}: $policies.misc$
+\end{itemize}
 
 $endfor$
 
 $for(resources)$
 
 \section*{Further Resources}
-\begin{itemize*}
+\begin{itemize}[leftmargin=*]
 \item \textbf{Jargon}: $resources.jargon$
 \item \textbf{Help with writing}: $resources.help$
 \item \textbf{Reference}: $resources.reference$
-\end{itemize*}
+\end{itemize}
 
 $endfor$
 

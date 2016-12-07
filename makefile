@@ -70,4 +70,4 @@ clean:
 	- $(RM) $(EXPORTED_DOCS)
 
 move:
-	- mv syllabus* # move to desired place
+	- mv syllabus.* /Users/Roambot/projects/phil105/content/extra/
