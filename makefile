@@ -25,10 +25,10 @@ RM=/usr/local/opt/coreutils/libexec/gnubin/rm
 
 PANDOC=/usr/local/bin/pandoc
 
-PANDOC_OPTIONS=--smart --standalone
+PANDOC_OPTIONS= --standalone
 
 PANDOC_HTML_OPTIONS=--to html5 -H style.css --template=template.html
-PANDOC_PDF_OPTIONS=--template=template.tex --latex-engine=xelatex
+PANDOC_PDF_OPTIONS=--template=template.tex --pdf-engine=xelatex
 # PANDOC_TEX_OPTIONS=--template=template.tex --to latex
 # PANDOC_DOCX_OPTIONS=--reference-docx=/Users/Roambot/dotfiles/pandoc/pandoc-templates/reference.docx
 # PANDOC_RTF_OPTIONS=
@@ -70,4 +70,4 @@ clean:
 	- $(RM) $(EXPORTED_DOCS)
 
 move:
-	- mv syllabus* # move to desired place
+	- mv syllabus.* /Users/Roambot/projects/phil232/content/extra/
