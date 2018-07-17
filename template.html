@@ -38,7 +38,7 @@ $if(header-color)$
 <style type="text/css">
 h2:before {
    background-color: $header-color$;
-    <!-- color: #FF0000; -->
+    <!-- color: black; -->
 }
 </style>
 $endif$
@@ -132,6 +132,10 @@ $for(requirements)$
     <!-- Format for Papers -->
     <h3>Format for Papers</h3>
     <p>$requirements.papers$</p>
+
+    <!-- Grading -->
+    <h3>Grading</h3>
+    <p>$requirements.grading$</p>
 
     <!-- Late Work -->
     <h3>Late Work</h3>

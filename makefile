@@ -25,10 +25,10 @@ RM=/usr/local/opt/coreutils/libexec/gnubin/rm
 
 PANDOC=/usr/local/bin/pandoc
 
-PANDOC_OPTIONS=--smart --standalone
+PANDOC_OPTIONS= --standalone
 
 PANDOC_HTML_OPTIONS=--to html5 -H style.css --template=template.html
-PANDOC_PDF_OPTIONS=--template=template.tex --latex-engine=xelatex
+PANDOC_PDF_OPTIONS=--template=template.tex --pdf-engine=xelatex
 # PANDOC_TEX_OPTIONS=--template=template.tex --to latex
 # PANDOC_DOCX_OPTIONS=--reference-docx=/Users/Roambot/dotfiles/pandoc/pandoc-templates/reference.docx
 # PANDOC_RTF_OPTIONS=
@@ -39,10 +39,10 @@ PANDOC_PDF_OPTIONS=--template=template.tex --latex-engine=xelatex
 # Pattern-matching Rules
 
 %.html : %.yml
-	$(PANDOC) $(PANDOC_OPTIONS) $(PANDOC_HTML_OPTIONS) -o syllabus.html $<
+	$(PANDOC) $(PANDOC_OPTIONS) $(PANDOC_HTML_OPTIONS) -o phil105-syllabus.html $<
 
 %.pdf : %.yml
-	$(PANDOC) $(PANDOC_OPTIONS) $(PANDOC_PDF_OPTIONS) -o syllabus.pdf $<
+	$(PANDOC) $(PANDOC_OPTIONS) $(PANDOC_PDF_OPTIONS) -o phil105-syllabus.pdf $<
 
 # %.tex : %.yml
 # 	$(PANDOC) $(PANDOC_OPTIONS) $(PANDOC_PDF_OPTIONS) -o $<
@@ -70,4 +70,4 @@ clean:
 	- $(RM) $(EXPORTED_DOCS)
 
 move:
-	- mv syllabus.* /Users/Roambot/projects/phil105/content/extra/
+	- mv phil105-syllabus.html phil105-syllabus.pdf /Users/Roambot/projects/phil105/static/materials/

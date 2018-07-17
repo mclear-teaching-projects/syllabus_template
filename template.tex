@@ -10,6 +10,7 @@
 %% Change as needed. Or just add me as a coauthor. Only some of these are
 %% used below in the hyperref declaration and address banner section.
 \def\myauthor{$instructor$}
+\def\myclassnumber{$classnumber$}
 \def\mytitle{Syllabus}
 \def\mycopyright{\myauthor}
 \def\mykeywords{}
@@ -73,7 +74,7 @@ $endif$
 %--------------------------------
 \usepackage{sectsty} 
 \usepackage[normalem]{ulem} 
-\sectionfont{\rmfamily\mdseries} 
+\sectionfont{\rmfamily\scshape\mdseries} 
 \subsectionfont{\rmfamily\mdseries\scshape\normalsize} 
 \subsubsectionfont{\rmfamily\bfseries\upshape\normalsize} 
 
@@ -109,7 +110,7 @@ $endif$
 \fancyhead{}
 \fancyfoot{}
 \rfoot{\footnotesize \thepage\ | \pageref{LastPage}}
-\lfoot{\footnotesize \myauthor}
+\lfoot{\footnotesize \myauthor\ | \myclassnumber}
 
 \fancypagestyle{firststyle}
 {
@@ -205,6 +206,7 @@ $for(requirements)$
 \item \textbf{Attendance}: $requirements.attendance$
 \item \textbf{Website}: $requirements.website$
 \item \textbf{Format for Papers}: $requirements.papers$
+\item \textbf{Grading}: $requirements.grading$
 \item \textbf{Late Work}: $requirements.late-work$
 \end{itemize}
 $endfor$
