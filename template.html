@@ -32,6 +32,18 @@ $endif$
 $for(header-includes)$
   $header-includes$
 $endfor$
+
+ <!--  Horizontal separators  -->
+$if(header-color)$
+<style type="text/css">
+h2:before {
+   background-color: $header-color$;
+    <!-- color: #FF0000; -->
+}
+</style>
+$endif$
+
+
 </head>
 <body>
 $for(include-before)$
@@ -77,17 +89,21 @@ $for(fax)$
 $endfor$
 $for(email)$
 <i class="fa fa-envelope-o"></i> $email$</br>
-  $endfor$
-  $for(urls)$
-  <i class="fa fa-globe"></i> $urls$</br>
-  $endfor$
+$endfor$
+$for(urls)$
+<i class="fa fa-globe"></i> $urls$</br>
+$endfor$
 </div>
 </div>
+
 
 <!-- Front Matter -->
 
-<h1>$title$</h1>
-<!-- </br> -->
+<h1>
+    </br>
+    </br>
+    $title$
+</h1>
 
 <!-- Overview -->
 <h2>Course Overview</h2>
@@ -102,6 +118,7 @@ $for(email)$
 <p>$materials$</p>
 
 <!-- Requirements -->
+$for(requirements)$
 <h2>Course Requirements</h2>
 
     <h3>Preparation</h3>
@@ -122,31 +139,56 @@ $for(email)$
     <!-- Late Work -->
     <h3>Late Work</h3>
     <p>$requirements.late-work$</p>
+$endfor$
 
 <!-- Evaluation -->
+$for(evaluation)$
 <h2>Evaluation</h2>
 
     <!-- Exam -->
-    <h3>Exams</h3>
-    <p>$evaluation.exam$</p>
+$if(evaluation.exam)$
+    $for(evaluation.exam)$
+    <h3>$evaluation.exam.title$</h3>
+    <p>$evaluation.exam.description$</p>
+    $endfor$
+$endif$
 
     <!-- Essays -->
-    <h3>Essays</h3>
-    <p>$evaluation.essay$</p>
+$if(evaluation.essay)$
+    $for(evaluation.essay)$
+    <h3>$evaluation.essay.title$</h3>
+    <p>$evaluation.essay.description$</p>
+    $endfor$
+$endif$
 
     <!-- Quizzes -->
-    <h3>Quizzes</h3>
-    <p>$evaluation.quiz$</p>
+$if(evaluation.quiz)$
+    $for(evaluation.quiz)$
+    <h3>$evaluation.quiz.title$</h3>
+    <p>$evaluation.quiz.description$</p>
+    $endfor$
+$endif$
 
     <!-- Responses -->
-    <h3>Reading Responses</h3>
-    <p>$evaluation.responses$</p>
+$if(evaluation.responses)$
+    $for(evaluation.responses)$
+    <h3>$evaluation.responses.title$</h3>
+    <p>$evaluation.responses.description$</p>
+    $endfor$
+$endif$
 
     <!-- Participation -->
-    <h3>Participation</h3>
-    <p>$evaluation.participation$</p>
+$if(evaluation.participation)$
+    $for(evaluation.participation)$
+    <h3>$evaluation.participation.title$</h3>
+    <p>$evaluation.participation.description$</p>
+    $endfor$
+$endif$
+
+$endfor$
 
 <!-- Policies -->
+$for(policies)$
 <h2>Policies </h2>
 
     <!-- Academic Integrity -->
@@ -165,7 +207,10 @@ $for(email)$
     <h3>Miscellaneous</h3>
     <p>$policies.misc$</p>
 
+$endfor$
+
 <!-- Resources -->
+$for(resources)$
 <h2>Resources</h2>
 
     <!-- Jargon -->
@@ -179,6 +224,8 @@ $for(email)$
     <!-- Reference -->
     <h3>Reference</h3>
     <p>$resources.reference$</p>
+
+$endfor$
 
 $body$
 $for(include-after)$

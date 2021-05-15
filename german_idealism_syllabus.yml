@@ -1,0 +1,161 @@
+---
+# Instructor details
+instructor: Colin McLear
+course: PHIL 4/880
+time: TBA
+location: "312 Louise Pound Hall"
+office: "315P Louse Pound Hall"
+hours: T/R 1-2 p.m. or by appointment
+phone: "(402) 472-2425"
+fax: "(402) 272-0626"
+email: <mclear@unl.edu>
+# Insert URLs without http://
+urls: '[phil880.colinmclear.net](http://phil880.colinmclear.net)'
+updated: true
+
+# Front matter
+title: 'Classical German Idealism'
+
+quote: 
+- content: '[I]t is not difficult to see that our own epoch is a time of birth and a transition to a new period. Spirit has broken with the previous world of its existence and its ways of thinking; it is now of a mind to let them recede into the past and to immerse itself in its own work at reshaping itself.'
+  title: '*Phenomenology of Sprit*'
+  author: 'G.W.F. Hegel'
+
+# Sections
+overview: |
+  A survey of "Classical" German Idealism, starting with Kant's publication of the
+  *Critique of Pure Reason* in 1781 and concluding with the first part of Hegel's
+  *Science of Logic* in 1812. Figures discussed include Kant, Jacobi, Reinhold,
+  Schulze, Fichte, Schelling, and Hegel. The general theme of the course concerns the
+  question, "How is inquiry into the nature of reality---i.e.
+  metaphysics---possible?". In asking this question we focus on four lines of thought
+  prominent in German Idealism—viz. Spinozism, skepticism, self-consciousness, and
+  the relationship between the senses and the intellect.
+
+objectives:
+  - In completing this course students will (i) gain a basic grasp of the views of
+    Immanuel Kant and his immediate German Idealist successors; (ii) learn how Kant's
+    thought was received in Germany into the early 19th century; (iii) understand the
+    formation and early developemnt of the various views that are typically grouped
+    under the moniker of post-Kantian "German Idealism".
+materials: |
+    There are three required books. Other materials will be posted on the course
+    website.
+
+    - George di Giovanni & H. S. Harris (eds.), *Between Kant and Hegel*. New York: Hackett Publishing, 2000.
+    - J. G. Fichte, *Introductions to the Wissenschaftslehre and Other Writings, 1797-1800*. Edited and translated by Daniel Breazeale. Indianapolis: Hackett Publishing, 1994.
+    - G.W.F. Hegel, *The Science of Logic*. Translated by George Di Giovanni Cambridge: Cambridge University Press, 2010.
+
+requirements:
+- prerequisite: 'Nine prior credit hours of philosophy, or good standing as a graduate student, are required to enroll in the course.'
+  preparation: 'You are expected to attend every class meeting fully prepared to discuss each assigned reading, to submit written work punctually, and to offer thoughtful and constructive responses to the remarks of your instructor and your classmates. Make sure that you bring the relevant readings with you to every lecture class. I further expect you to treat both the texts at hand and your classmates’ ideas with openness and respect.'
+  attendance: 'Attendance is required. You are also expected to attend every section meeting. 1/2 a letter grade will be deducted from your final course grade for every absence from section after your fifth.'
+  website: 'We will use a course website for all materials. The site address is: [phil880.colinmclear.net](http://phil880.colinmclear.net). Upcoming assignments and readings will be posted there. Please let me know if you have any problems. Technical glitches, computer malfunctions and crashing hard drives are not excuses for failing to complete work in this class.'
+  papers: 'Please submit work as a .docx or .rtf file. All work must be typed. I will not accept any handwritten work aside from that we do in class. Your papers should be in 12-point Times New Roman font, double-spaced with margins set to one inch on all sides. Your name, my name, the date and assignment should appear in the top left hand corner of the first page. Your last name and page number must appear in the top right hand corner on each subsequent page. Please staple or paperclip hard copies of papers and drafts. You are responsible for the presentation of your papers.'
+  late-work: 'Late papers and assignments will standardly be marked down by **1/3 of a letter grade for each day the work is late** (for example, from A- to B+, from B+ to B, and so on).'
+evaluation:
+- exam:
+    - title: |
+        Four Passage Analyses: 20%
+      description: |
+        Analyze and explain the point of a particular passage in plain language and in no more than 300 words. Topics will be provided.
+
+  essay:
+    - title: |
+        Essay: 35%
+      description: |
+        Explain and critically assess a philosophical argument. Topics
+        will be suggested. Paper will be due in *two* drafts.
+
+        - **Undergraduates**: Approximately 4-6 pages (1200-2000 words).
+        - **Graduate students**: Approximately 15-20 pages (3750-5000 words)
+
+  quiz:
+    - title: |
+        Weekly reading responses: 25%
+      description: |
+        Submit a weekly reading response of roughly 100-150 words (500 max) to the
+        course listserv via email on Mondays by 8pm. Your reading responses should
+        detail your observations about a primary text (though one can also relate
+        this to seconary readings). The responses are not summaries. Move to delimit
+        1-2 major points or ideas from the reading and discuss them. What do you find
+        interesting or compelling? What do you find logically or philosophically problematic?
+
+  responses:
+    - title: |
+        Weekly reading précis: 5%
+      description: | 
+        Write a précis addressing a particular primary or secondary text assigned for
+        the week (this does not include my notes). A précis is a rhetorical exercise
+        that asks you to summarize a text, including the claim/argument, supporting
+        evidence, purpose, and audience in 4 sentences. For a helpful example of the
+        form, see:
+        <http://oregonstate.edu/instruct/phl201/modules/rhetorical-precis/sample/peirce_sample_precis_click.html>
+
+  participation:
+    - title: |
+        Participation: 15%
+      description: |
+        The participation grade takes into account your attendance in class as well
+        as the quantity and quality of your participation.
+policies:
+- integrity: 'All the work you turn in (including papers, drafts, and discussion board posts) must be written by you specifically for this course. It must originate with you in form and content with all contributory sources fully and specifically acknowledged. Make yourself familiar with UNL’s Student Code of Conduct and Academic Integrity Code, available online. **In this course, the normal penalty for any violation of the code is an “F” for the semester**. Violations may have additional consequences including expulsion from the university. Don’t plagiarize – It just isn’t worth it.'
+  university: 'This instructor respects and upholds University policies and regulations pertaining to the observation of religious holidays; assistance available to physically handicapped, visually and/or hearing impaired students; plagiarism; sexual harassment; and racial or ethnic discrimination. All students are advised to become familiar with the respective University regulations and are encouraged to bring any questions or concerns to the attention of the instructor.'
+  ada: 'The University strives to make all learning experiences as accessible as possible. If you anticipate or experience barriers based on your disability (including mental health, chronic or temporary medical conditions), please let me know immediately so that we can discuss options privately. To establish reasonable accommodations, I may request that you register with Services for Students with Disabilities (SSD). If you are eligible for services and register with their office, make arrangements with me as soon as possible to discuss your accommodations so they can be implemented in a timely manner.  SSD contact information:  117 Louise Pound Hall; 402-472-3787.'
+  counseling: 'UNL offers a variety of options to students to aid them in dealing with stress and adversity. [Counseling and Psychological & Services (CAPS)](https://caps.unl.edu/) is a multidisciplinary team of psychologists and counselors that works collaboratively with Nebraska students to help them explore their feelings and thoughts and learn helpful ways to improve their mental, psychological and emotional well-being when issues arise. CAPS can be reached by calling 402-472-7450. [Big Red Resilience & Well-Being (BRRWB)](https://resilience.unl.edu/home) provides one-on-one well-being coaching to any student who wants to enhance their well-being. Trained well-being coaches help students create and be grateful for positive experiences, practice resilience and self-compassion, and find support as they need it.  BRRWB can be reached by calling 402-472-8770.'
+  masks: |
+    As of July 17, 2020 and until further notice, all University of Nebraska–Lincoln (UNL) faculty, staff, students, and visitors (including contractors, service providers, and others) are required to use a facial covering at all times when indoors except under specific conditions outlined in the COVID-19 face covering policy found at: [https://covid19.unl.edu/face-covering-policy](https://covid19.unl.edu/face-covering-policy). This statement is meant to clarify classroom policies for face coverings:
+
+    To protect the health and well-being of the University and wider community, UNL has implemented a policy requiring all people, including students, faculty, and staff, to wear a face covering that covers the mouth and nose while on campus. The classroom is a community, and as a community, we seek to maintain the health and safety of all members by wearing face coverings when in the classroom. Failure to comply with this policy is interpreted as a disruption of the classroom and may be a violation of UNL’s Student Code of Conduct.
+
+    Individuals who have health or medical reasons for not wearing face coverings should work with the Office of Services for Students with Disabilities (for students) or the Office of Faculty/Staff Disability Services (for faculty and staff) to establish accommodations to address the health concern. Students who prefer not to wear a face covering should work with their advisor to arrange a fully online course schedule that does not require their presence on campus.
+
+    Students in the classroom:
+
+      1. If a student is not properly wearing a face covering, the instructor will remind the student of the policy and ask them to comply with it.
+      2. If the student will not comply with the face covering policy, the instructor will ask the student to leave the classroom, and the student may only return when they are properly wearing a face covering.
+      3. If the student refuses to properly wear a face covering or leave the classroom, the instructor will dismiss the class and will report the student to Student Conduct & Community Standards for misconduct, where the student will be subject to disciplinary action.
+
+    Instructors in the classroom:
+
+      1. If an instructor is not properly wearing a face covering, students will remind the instructor of the policy and ask them to comply with it.
+      2. If an instructor will not properly wear a face covering, students may leave the classroom and should report the misconduct to the department chair or via the TIPS system for disciplinary action through faculty governance processes.
+  misc: 'Please turn off cell phones, beeping watches, and other gadgets that make noise before entering or beginning class. Absolutely no texting is permitted during class. I will subtract up to five points from your participation grade each and every time your phone rings or I see you texting during class.'
+resources:
+- jargon: 'It’s important to be on top of the technical terms used by philoso- phers. Please ask for clarification of terms in class. You can also consult Jim Pryor’s online “Philosophical Terms and Methods.”'
+  help: |
+    Papers should adhere to some consistent practice of footnoting and citation (Chicago, MLA, etc.). I don’t really mind which one you use as long as you are consistent. On writing a philosophy paper, there is no better on-line guide than Jim Pryor’s. Please [consult it](http://www.jimpryor.net/teaching/guidelines/writing.html). Hacker’s [A Writer’s Reference](https://www.amazon.com/Writers-Reference-Diana-Hacker-dp-1319057446/dp/1319057446/ref=dp_ob_title_bk) is also extremely helpful. Useful online writing help may be found at the Purdue Online Writing Lab at [http://owl.english.purdue.edu/owl/](http://owl.english.purdue.edu/owl/).
+
+    The UNL Writing Center can provide you with meaningful support as you write for this class as well as every course in which you enroll. Trained undergraduate and graduate peer consultants are available to talk with you about all forms of communication. You are welcome to bring in everything from lab reports, presentations, and research papers to cover letters, application essays, and graduate theses and dissertations. Writing Center Consultants can work with you at any stage of the writing process, from brainstorming and organizing your ideas through polishing a final draft.
+
+    In 2020-21, there are two ways you can connect with a Consultant: Online (a real-time, video conversation) and eTutoring (email feedback). To learn more about these options and view video tutorials, please visit our [Online Writing Services](https://www.unl.edu/writing/online-writing-center-services). You can sign up any time by visiting [unl.mywconline.com](unl.mywconline.com). For more information about the Writing Center, please visit [unl.edu/writing](unl.edu/writing).
+
+  reference: 'The Stanford Encyclopedia of Philosophy at [http://plato.stanford.edu](http://plato.stanford.edu) is an excellent online resource.'
+
+schedule: |
+    This is a tentative schedule only. Please check the course website for the
+    most up-to-date schedule.
+
+    - Week 1:  Kant (overview)      KrV preface (A) & intro (B); KU excerpt
+    - Week 2:  Kant's Assumptions   Metaphysical Deduction; Intro to the Dialectic of Pure Reason
+    - Week 3:  Kant & Spinozism     KpV 5:99-101; Orientation essay; excerpt from *Pölitz Religion*
+    - Week 4:  Reinhold & Schulze   The Foundation of Philosophical Knowledge; Anesidemus
+    - Week 5:  Fichte I             Anesidemus review; 1st intro to WL
+    - Week 6:  Fichte II            2nd intro to WL
+    - Week 7:  Schelling I          Introduction to First Outline of a System of Natural Philosophy
+    - Week 8:  Schelling II         Presentation of my system
+    - Week 9:  Hegel I              Pdg Intro
+    - Week 10:  Hegel II            PdG Preface
+    - Week 11:  Hegel III           WdL Intro
+    - Week 12:  Hegel IV            WdL With What Must the Beginning of Science Be Made?
+    - Weeks 13-14: Hegel V-VI       WdL Being-Nothing-Becoming
+
+# Settings
+mainfont: Minion Pro
+sansfont: Optima
+fontsize: 11pt
+lang: en-US
+geometry: letterpaper, textwidth=6in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in
+header-color: \#FF6600 
+
+---
